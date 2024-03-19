@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - FHP Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            background-image: url('https://vertexinfosoft.com/wp-content/uploads/2020/02/logo.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #333333;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #666666;
+        }
+
+        ul {
+            padding-left: 20px;
+            color: #666666;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .section-header {
+            border-bottom: 2px solid #cccccc;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+            .section-header h1 {
+                color: #007bff;
+                font-size: 36px;
+                margin: 0;
+                padding-bottom: 10px;
+            }
+
+            .section-header p {
+                font-size: 18px;
+                color: #666666;
+            }
+
+        .additional-requirements {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #cccccc;
+        }
+
+            .additional-requirements h3 {
+                color: #007bff;
+                font-size: 24px;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            .additional-requirements ol {
+                counter-reset: requirement-counter;
+            }
+
+                .additional-requirements ol li {
+                    counter-increment: requirement-counter;
+                    list-style: none;
+                    margin-bottom: 10px;
+                    color: #666666;
+                }
+
+                    .additional-requirements ol li:before {
+                        content: counter(requirement-counter) ". ";
+                        font-weight: bold;
+                        color: #007bff;
+                    }
+    </style>
+</head>
+<body>
+        <div class="container">
+            <div class="section-header">
+                <h1>About Us - FHP Project</h1>
+                <p>Empowering Organizations with Innovative File Handling Solutions</p>
+            </div>
+
+            <section>
+                <h2>Purpose</h2>
+                <p>The purpose of this document is to define the requirements for the development of FRH tool that will handle CRUD operation on trainee information.</p>
+            </section>
+
+            <section>
+                <h2>Target Audience</h2>
+                <p>The intended audience for this Tool can be anyone who wants to manage a team, keeping a record of the information of all the members of a team or group.</p>
+            </section>
+
+            <section>
+                <h2>User Interface Elements</h2>
+                <p>There will be three views:</p>
+                <ol>
+                    <li>Main View: Contains all the trainee information in a grid and three buttons Add, Edit, Delete menu for the action.</li>
+                    <li>Second View: Same for Add and Update operation which contains all the information of a trainee and add, edit, clear buttons.</li>
+                    <li>Third View: Contains all the information in read-only format, and four buttons (first, last, previous, next).</li>
+                </ol>
+                <p>Additional user interface guidelines are provided for enabling/disabling buttons based on user interactions.</p>
+            </section>
+
+            <section>
+                <h2>Input/Output Requirements</h2>
+                <p>In input, the data of any person will be entered in various text-boxes and then will be stored in a flat file. The Add button appends information to the file, and the Update button modifies existing data in the file.</p>
+            </section>
+
+            <section>
+                <h2>Functional Requirements</h2>
+                <p>Detailed functional requirements include specifications for Main View, Second View, and Third View, along with input validation, file operations, and user interaction guidelines.</p>
+            </section>
+
+            <section>
+                <h2>Non-functional Requirements</h2>
+                <p>Non-functional requirements specify constraints such as file locking, file format, and additional requirements for the FHP Project.</p>
+            </section>
+
+            <section>
+                <h2>Additional Requirements</h2>
+                <ol>
+                    <li>Filter Condition</li>
+                    <li>DateTimePicker</li>
+                    <li>Authentication Form</li>
+                </ol>
+                <p>These additional requirements extend the functionality of the FHP Project to include advanced search, improved DateTimePicker, and user authentication features.</p>
+            </section>
+        </div>
+    </body>
+</html>

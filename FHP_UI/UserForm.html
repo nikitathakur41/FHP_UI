@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            border: 2px solid #ccc;
+            background-color:honeydew;
+            border-radius: 5px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="Qualification"],
+        textarea,
+        select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        select {
+            height: 38px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: calc(25% - 10px);
+            transition: background-color 0.3s;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .add-edit-container,
+        .navigation-buttons,
+        .centered-button {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .add-button,
+        .edit-button,
+        .clear-button,
+        .navigation-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .edit-button {
+            background-color: #008CBA;
+        }
+
+        .clear-button {
+            background-color: #f44336;
+        }
+
+        .navigation-button {
+            background-color: #008CBA;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .edit-button:hover {
+            background-color: #0073e6;
+        }
+
+        .clear-button:hover {
+            background-color: #e60000;
+        }
+
+        .navigation-button:hover {
+            background-color: #0073e6;
+        }
+
+        .centered-button {
+            text-align: center;
+        }
+
+        /* Hide navigation buttons */
+        .navigation-button {
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>User Information Form</h2>
+        <form action="#" method="post">
+            <label for="SerialNumber">Serial Number:</label>
+            <input type="text" id="SerialNumber" name="SerialNumber" required>
+
+            <label for="Prefix">Prefix:</label>
+            <select id="Prefix" name="Prefix">
+                <option value="Mr.">Mr.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Miss">Miss</option>
+                <option value="Dr.">Dr.</option>
+                <option value="Er">Er</option>
+                <option value="Sir">Sir</option>
+                <option value="Mam">Mam</option>
+                <option value="Prof">Prof</option>
+            </select>
+
+            <label for="FirstName">First Name:</label>
+            <input type="text" id="FirstName" name="FirstName" required>
+
+            <label for="MiddleName">Middle Name:</label>
+            <input type="text" id="MiddleName" name="MiddleName">
+
+            <label for="LastName">Last Name:</label>
+            <input type="text" id="LastName" name="LastName" required>
+
+            <label for="DateOfBirth">Date of Birth:</label>
+            <input type="date" id="DateOfBirth" name="DateOfBirth" required>
+
+            <label for="Qualification">Qualification:</label>
+            <input type="Qualification" list="qualifications" id="Qualification" name="Qualification">
+            <datalist id="qualifications">
+                <option value="10th">
+                <option value="12th">
+                <option value="BSc">
+                <option value="BBA">
+                <option value="BCA">
+                <option value="B.Tech">
+                <option value="M.Tech">
+                <option value="MCA">
+                <option value="Ph.D.">
+                <option value="Diploma">
+                <option value="MBBS">
+            </datalist>
+
+            <label for="CurrentCompany">Current Company:</label>
+            <input type="text" id="CurrentCompany" name="CurrentCompany">
+
+            <label for="JoiningDate">Joining Date:</label>
+            <input type="date" id="JoiningDate" name="JoiningDate">
+
+            <label for="CurrentAddress">Current Address:</label>
+            <textarea id="CurrentAddress" name="CurrentAddress"></textarea>
+
+            <div class="add-edit-container">
+                <button type="button" class="add-button">Add</button>
+                <button type="button" class="edit-button">Edit</button>
+                <button type="button" class="clear-button">Clear</button>
+            </div>
+
+            <div class="navigation-buttons">
+                <button type="button" class="navigation-button">First</button>
+                <button type="button" class="navigation-button">Previous</button>
+                <button type="button" class="navigation-button">Next</button>
+                <button type="button" class="navigation-button">Last</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
